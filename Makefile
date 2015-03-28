@@ -13,7 +13,6 @@ DEFINES       = -D_REENTRANT
 CXXFLAGS      = -g -pipe -Wall -Wextra -fPIE $(DEFINES)
 
 SRCFILES= $(wildcard *.cpp)
-# OBJFILES= $(patsubst %.cpp, %.o, $(SRCFILES))
 EXECUTABLES= $(patsubst %.cpp, %, $(SRCFILES))
 
 # this will automatically associate with .cpp files and produce executables
@@ -21,10 +20,3 @@ all: ${EXECUTABLES}
 
 clean:
 	rm -f --verbose $(EXECUTABLES)
-#	rm -f --verbose $(OBJFILES)
-
-# ${OBJFILES}:$(SRCFILES)
-# 	$(CXX) -c -o $@ $< $(CXXFLAGS)
-
-# ${EXECUTABLES}:$(OBJFILES)
-# 	$(CXX) -o $@ $< $(CXXFLAGS)
