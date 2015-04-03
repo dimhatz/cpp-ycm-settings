@@ -39,7 +39,10 @@ flags = [
 #'-fPIE', # for executables
 '-Wall',
 '-Wextra',
+
 #'-Weverything', #enable all diagnostics, to be used when picking up what NOT to warn about
+#'-Wno-c++98-compat', # together with -Weverything to exclude c++98 related warnings
+
 '-pedantic',
 '-pedantic-errors',
 '-DUSE_CLANG_COMPLETER',
