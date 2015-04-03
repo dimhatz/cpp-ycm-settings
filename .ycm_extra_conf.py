@@ -36,9 +36,11 @@ import ycm_core
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
 #'-fPIC', # for shared libraries, might not be needed if using -fPIE
-'-fPIE', # for executables
+#'-fPIE', # for executables
 '-Wall',
 '-Wextra',
+'-pedantic',
+'-pedantic-errors',
 '-DUSE_CLANG_COMPLETER',
 # THIS IS IMPORTANT! Without a "-std=<something>" flag, clang won't know which
 # language to use when compiling headers. So it will guess. Badly. So C++

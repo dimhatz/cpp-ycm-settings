@@ -8,9 +8,10 @@
 #
 #  -D_REENTRANT use thread safe versions of some functions from libraries
 #  -g is for debug
+#  -pedantic: show warnings when using non-standard extensions
 CXX           = g++
 DEFINES       = -D_REENTRANT
-CXXFLAGS      = -g -pipe -Wall -Wextra -fPIE $(DEFINES)
+CXXFLAGS      = -pedantic -pedantic-errors -g -pipe -Wall -Wextra -fPIE -std=c++11 $(DEFINES)
 
 SRCFILES= $(wildcard *.cpp)
 EXECUTABLES= $(patsubst %.cpp, %, $(SRCFILES))
