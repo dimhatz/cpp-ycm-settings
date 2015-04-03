@@ -39,6 +39,7 @@ flags = [
 #'-fPIE', # for executables
 '-Wall',
 '-Wextra',
+'-Weverything', #enable all diagnostics
 '-pedantic',
 '-pedantic-errors',
 '-DUSE_CLANG_COMPLETER',
