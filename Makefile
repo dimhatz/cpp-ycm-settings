@@ -9,6 +9,9 @@
 #  -D_REENTRANT use thread safe versions of some functions from libraries
 #  -g is for debug
 #  -pedantic: show warnings when using non-standard extensions
+#  TODO: consider adding
+#  -Werror : turn every warning into error
+#  -Wno-error=unused-variable : together with above, keep unused vars as warnings
 CXX           = g++
 DEFINES       = -D_REENTRANT
 CXXFLAGS      = -pedantic -pedantic-errors -g -pipe -Wall -Wextra -fPIE -std=c++11 $(DEFINES)
